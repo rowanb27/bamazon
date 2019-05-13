@@ -3,7 +3,7 @@ const inquirer = require('inquirer');
 
 const connection = mysql.createConnection({
     host: 'localhost',
-    port: 3333,
+    port: 3306,
     user: 'root',
     password: '',
     database: 'bamazon'
@@ -12,11 +12,7 @@ const connection = mysql.createConnection({
 connection.connect(function (err) {
     if (err) throw (err);
     console.log('connected as id ' + connection.threadId);
-    console.log('////////////////////////////////////////////////////////////////////')
-    console.log('////////////////////////////////////////////////////////////////////')
     console.log('///////////////////    Welcome to Bamazon      /////////////////////')
-    console.log('////////////////////////////////////////////////////////////////////')
-    console.log('////////////////////////////////////////////////////////////////////')
 
     queryAllProducts();
     customerRequest();
